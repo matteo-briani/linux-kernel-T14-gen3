@@ -1,5 +1,6 @@
 # linux kernel for the Lenovo T14 gen3
-A patched linux kernel for the Lenovo T14 gen3
+A patched linux kernel for the Lenovo T14 gen3.
+The kernel config is copied from the general ubuntu kernel 5.19.3.
 
 ## Suspend issue
 The problem is discussed [here](https://gitlab.freedesktop.org/drm/intel/-/issues/5531).
