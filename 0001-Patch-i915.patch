@@ -1,0 +1,30 @@
+From 1e5c222c730f51841745b7e12d24990f9bc93d7e Mon Sep 17 00:00:00 2001
+From: Matteo Briani <matteo-briani@users.noreply.github.com>
+Date: Mon, 29 Aug 2022 14:10:13 +0200
+Subject: [PATCH] Patch i915
+
+---
+ drivers/gpu/drm/i915/display/intel_bios.c | 6 ++++--
+ 1 file changed, 4 insertions(+), 2 deletions(-)
+
+diff --git a/drivers/gpu/drm/i915/display/intel_bios.c b/drivers/gpu/drm/i915/display/intel_bios.c
+index 51dde5bfd..0039a0ce6 100644
+--- a/drivers/gpu/drm/i915/display/intel_bios.c
++++ b/drivers/gpu/drm/i915/display/intel_bios.c
+@@ -2663,9 +2663,11 @@ static void parse_ddi_port(struct intel_bios_encoder_data *devdata)
+ 
+ 	if (i915->vbt.ports[port]) {
+ 		drm_dbg_kms(&i915->drm,
+-			    "More than one child device for port %c in VBT, using the first.\n",
++		           "i915 stucks with an nonexisting eDP, "
++                           "thus although we have more than one child device for port %c in VBT, "
++                           "using the latter one and ignore the first.\n",
+ 			    port_name(port));
+-		return;
++
+ 	}
+ 
+ 	sanitize_device_type(devdata, port);
+-- 
+2.37.2
+
