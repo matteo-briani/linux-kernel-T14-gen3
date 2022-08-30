@@ -23,6 +23,7 @@ Then, inside the container
 ```
 cd /builder/linux
 git checkout dcf8e5633e2e69ad60b730ab5905608b756a032f
+make mrproper
 mv ubuntu-based-general-kernel-config .config
 git am 0001-Patch-i915.patch
 make olddefconfig
