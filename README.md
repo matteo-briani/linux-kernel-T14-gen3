@@ -17,7 +17,7 @@ The only (quick) solution I found is to change the BIOS settings to "windows/lin
 A container is provided is case you want to keep your system clean. 
 ```
 docker build -t kernel-builder .
-docker run --mount type=bind,source="$(pwd)"/builds,target=/builder -it kernel-builder /bin/bash
+docker run --mount type=bind,source="$(pwd)"/builds,target=/builds -it kernel-builder /bin/bash
 ```
 Then, inside the container
 ```
