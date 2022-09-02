@@ -11,7 +11,8 @@ RUN git clone --shallow-since=2022-08-01 https://github.com/torvalds/linux.git
 RUN git config --global user.name "kernel patch"
 RUN git config --global user.email "kernel.patch@no-reply.no"
 
-COPY ./0001-Patch-i915.patch /builder
+COPY ./remove-return.patch /builder
+COPY ./i915.patch /builder
 COPY ./ubuntu-based-general-kernel-config /builder
 COPY ./launch.sh /builder
 

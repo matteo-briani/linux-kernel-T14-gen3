@@ -4,8 +4,10 @@ The kernel config is copied from the general ubuntu kernel 5.19.3.
 
 ## Suspend issue
 The problem is discussed [here](https://gitlab.freedesktop.org/drm/intel/-/issues/5531).
+The are two independent proposed patches.
 
-The patch is proposed by ```taoky``` in the above thread.
+One patch proposed by ```taoky``` in the above thread (```remove-return.patch```) and another one [here](https://patchwork.freedesktop.org/patch/488110/) (```i915.patch```).
+Choose one.
 
 This repo only simplifies things in case I to do a fresh install on my Lenovo T14 gen3 with the patched kernel.
 
